@@ -3,3 +3,5 @@ This repository contains my solutions to LeetCode problems. I use it to practice
 Languages: Java 
 Started: July 2026
 Curently doing: LeetCode 75
+
+LeetCode profile: https://leetcode.com/u/Mehar_Bajaj/
