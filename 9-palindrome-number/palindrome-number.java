@@ -7,6 +7,7 @@ class Solution {
             pt1++;
             pt2--;
         } 
+        
         return true;
     }
 }
