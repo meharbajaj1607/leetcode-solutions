@@ -1,6 +1,6 @@
 class Solution {
     public int[][] merge(int[][] matrix) {
-        Arrays.sort(matrix, (a, b) -> a[0] - b[0]);
+        Arrays.sort(matrix, (a, b) -> a[0] - b[0]);//ascending order on basis of 0th ele
         int[] start = new int[matrix.length];
         int[] end = new int[matrix.length];
         for(int i=0;i<matrix.length;i++){
