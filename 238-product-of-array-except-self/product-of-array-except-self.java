@@ -10,14 +10,6 @@ class Solution {
         for(int i=nums.length-2;i>=0;i--){
             post[i] = post[i+1]*nums[i+1];
         }
-        for(int i=0;i<nums.length;i++){
-            System.out.print(pre[i]+" ");
-        }
-        System.out.println();
-        for(int i=0;i<nums.length;i++){
-            System.out.print(post[i]+" ");
-        }
-
         int arr[] = new int[nums.length];
         for(int i = 0;i<nums.length;i++){
             arr[i] = (post[i]*pre[i]);
