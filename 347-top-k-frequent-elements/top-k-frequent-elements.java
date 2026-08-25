@@ -1,6 +1,6 @@
 class Solution {
     public int[] topKFrequent(int[] nums, int k) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>(); //x,freq
         for(int x:nums){
             if(map.containsKey(x)) map.put(x,map.get(x)+1);
             else map.put(x,1);
@@ -13,7 +13,7 @@ class Solution {
         }
         int[] arr = new int[k];
         for(int i=0;i<k;i++){
-            arr[i] = pq.poll().getKey();
+            arr[i] = pq.remove().getKey();
         }
         return arr;
     }
