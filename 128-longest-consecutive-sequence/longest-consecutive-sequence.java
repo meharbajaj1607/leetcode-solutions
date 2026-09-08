@@ -2,26 +2,45 @@ class Solution {
     public int longestConsecutive(int[] nums) {
         if (nums.length == 0) return 0;
 
-        TreeSet<Integer> set = new TreeSet<>();
+        // TreeSet<Integer> set = new TreeSet<>();
 
-        for (int x : nums) {
-            set.add(x);
-        }
+        // for (int x : nums) {
+        //     set.add(x);
+        // }
 
-        List<Integer> arr = new ArrayList<>(set);
+        // List<Integer> arr = new ArrayList<>(set);
 
-        int count = 1;
-        int ans = 1;
+        // int count = 1;
+        // int ans = 1;
 
-        for (int i = 1; i < arr.size(); i++) {
-            if (arr.get(i) == arr.get(i - 1) + 1) {
+        // for (int i = 1; i < arr.size(); i++) {
+        //     if (arr.get(i) == arr.get(i - 1) + 1) {
+        //         count++;
+        //     } else {
+        //         ans = Math.max(ans, count);
+        //         count = 1;
+        //     }
+        // }
+
+        // return Math.max(ans, count);
+        Arrays.sort(nums);
+        int count=1;
+        int j=1;
+        int ans=0;
+        for(int i=0;i<nums.length-1;i++){
+            if(nums[j]-nums[i]==1){
+                j++;
                 count++;
-            } else {
-                ans = Math.max(ans, count);
-                count = 1;
+            }else if(nums[j]-nums[i]==0) {
+                j++;
+                continue;
+            }else{
+                ans = Math.max(count,ans);
+                count=1;
+                j++;
             }
         }
-
-        return Math.max(ans, count);
+        ans = Math.max(count,ans);
+        return ans;
     }
 }
