@@ -6,12 +6,6 @@ class Solution {
                 dp[i][j]=0;
             }
         }
-        // for(int i=0;i<dp.length;i++){
-        //     if(i==0)dp[0][i]=0;
-        // }
-        // for(int i=0;i<dp[0].length;i++){
-        //     if(i==0)dp[i][0]=0;
-        // }
         for(int i=0;i<dp.length;i++){
             for(int j=0;j<dp[0].length;j++){
                 if(i==0&&j==0) dp[i][j] = grid[i][j];
