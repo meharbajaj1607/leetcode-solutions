@@ -14,7 +14,6 @@ class Solution {
         while(n>=10){
             sum = findSum(n);
             n = sum;
-            if(n==1)return true;
             if(n==1||n==7)return true;
         }
         return false;
